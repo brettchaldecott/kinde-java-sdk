@@ -25,6 +25,7 @@ public class KindeClientBuilder {
             Dotenv dotenv = Dotenv.load();
             setParameterFromEnvironmental(KindeParameters.DOMAIN, dotenv);
             setParameterFromEnvironmental(KindeParameters.REDIRECT_URI, dotenv);
+            setParameterFromEnvironmental(KindeParameters.DEFAULT_REDIRECT_URI, dotenv);
             setParameterFromEnvironmental(KindeParameters.LOGOUT_REDIRECT_URI, dotenv);
             setParameterFromEnvironmental(KindeParameters.OPENID_ENDPOINT, dotenv);
             setParameterFromEnvironmental(KindeParameters.AUTHORIZATION_ENDPOINT, dotenv);
@@ -66,6 +67,13 @@ public class KindeClientBuilder {
     public KindeClientBuilder redirectUri(String redirectUri) {
         if (redirectUri != null) {
             this.parameters.put(KindeParameters.REDIRECT_URI.getValue(), redirectUri);
+        }
+        return this;
+    }
+
+    public KindeClientBuilder defaultRedirectUri(String defaultRedirectUri) {
+        if (defaultRedirectUri != null) {
+            this.parameters.put(KindeParameters.DEFAULT_REDIRECT_URI.getValue(), defaultRedirectUri);
         }
         return this;
     }

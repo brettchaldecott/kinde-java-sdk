@@ -99,7 +99,10 @@ public class KindeClientSessionImpl implements KindeClientSession {
         if (this.kindeConfig.scopes() != null && !this.kindeConfig.scopes().isEmpty()) {
             scope = new Scope(this.kindeConfig.scopes().toArray(new String[0]));
         }
-        URI callback = new URI(this.kindeConfig.redirectUri());
+        URI callback = new URI(this.kindeConfig.defaultRedirectUri());
+        if (parameters.isEmpty()) {
+            callback = new URI(this.kindeConfig.redirectUri());
+        }
         State state = new State();
 
         CodeVerifier codeVerifier = null;

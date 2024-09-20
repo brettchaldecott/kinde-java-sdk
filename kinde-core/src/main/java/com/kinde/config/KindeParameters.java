@@ -10,6 +10,7 @@ import java.util.function.Function;
 public enum KindeParameters {
     DOMAIN("KINDE_DOMAIN", (Function<Object, String>)val->(String)val),
     REDIRECT_URI("KINDE_REDIRECT_URI",(Function<Object, String>)val->(String)val),
+    DEFAULT_REDIRECT_URI("KINDE_DEFAULT_REDIRECT_URI",(Function<Object, String>)val->(String)val),
     LOGOUT_REDIRECT_URI("KINDE_LOGOUT_REDIRECT_URI",(Function<Object, String>)val->(String)val),
     OPENID_ENDPOINT("KINDE_OPENID_ENDPOINT",(Function<Object, String>)val->(String)val),
     AUTHORIZATION_ENDPOINT("KINDE_AUTHORIZATION_ENDPOINT",(Function<Object, String>)val->(String)val),

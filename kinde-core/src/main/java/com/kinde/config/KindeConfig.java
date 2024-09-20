@@ -14,6 +14,8 @@ public interface KindeConfig {
 
     String redirectUri();
 
+    String defaultRedirectUri();
+
     String logoutRedirectUri();
 
     String openidEndpoint();

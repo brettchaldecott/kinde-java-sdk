@@ -29,6 +29,11 @@ public class KindeConfigImpl implements KindeConfig {
     }
 
     @Override
+    public String defaultRedirectUri() {
+        return (String)this.parameters.get(KindeParameters.DEFAULT_REDIRECT_URI.getValue());
+    }
+
+    @Override
     public String logoutRedirectUri() {
         return (String)this.parameters.get(KindeParameters.LOGOUT_REDIRECT_URI.getValue());
     }

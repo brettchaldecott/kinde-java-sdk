@@ -115,6 +115,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .build();
         KindeClientSession kindeClientSession = kindeClient.initClientSession("test", null);
         AuthorizationUrl authorizationUrl1 = kindeClientSession.authorizationUrl();
@@ -128,6 +129,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .addScope("openid")
                 .addAudience("http://localhost:8089/api")
                 .grantType(AuthorizationType.CODE)
@@ -147,6 +149,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .build();
         KindeClientSession kindeClientSession = kindeClient.initClientSession("test", null);
         AuthorizationUrl authorizationUrl1 = kindeClientSession.login();
@@ -160,6 +163,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .addScope("openid")
                 .addAudience("http://localhost:8089/api")
                 .grantType(AuthorizationType.CODE)
@@ -179,6 +183,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .build();
         KindeClientSession kindeClientSession = kindeClient.initClientSession("test", null);
         AuthorizationUrl authorizationUrl1 = kindeClientSession.register();
@@ -193,6 +198,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .addScope("openid")
                 .addAudience("http://localhost:8089/api")
                 .grantType(AuthorizationType.CODE)
@@ -233,6 +239,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .build();
         KindeClientSession kindeClientSession = kindeClient.initClientSession("test", null);
         AuthorizationUrl authorizationUrl1 = kindeClientSession.createOrg("TEST1");
@@ -248,6 +255,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .addScope("openid")
                 .addAudience("http://localhost:8089/api")
                 .grantType(AuthorizationType.CODE)
@@ -273,6 +281,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .build();
         KindeClientSession kindeClientSession = kindeClient.initClientSession("test", null);
         KindeTokens kindeTokens = kindeClientSession.retrieveTokens();
@@ -284,6 +293,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .addScope("openid")
                 .addAudience("http://localhost:8089/api")
                 .grantType(AuthorizationType.CODE)
@@ -366,6 +376,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .build();
         KindeClientSession kindeClientSession = kindeClient.clientSession();
         KindeTokens kindeTokens = kindeClientSession.retrieveTokens();
@@ -377,6 +388,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .logoutRedirectUri("http://localhost:8080/")
                 .addScope("openid")
                 .addAudience("http://localhost:8089/api")
@@ -422,6 +434,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .build();
         KindeClientSession kindeClientSession =  kindeClient.initClientSession(RefreshToken.init(JwtGenerator.refreshToken(),true));
         KindeTokens kindeTokens = kindeClientSession.retrieveTokens();
@@ -433,6 +446,7 @@ public class KindeClientCodeSessionImplTest {
                 .clientId("test")
                 .clientSecret("test")
                 .redirectUri("http://localhost:8080/")
+                .defaultRedirectUri("http://localhost:8080/")
                 .addScope("openid")
                 .addAudience("http://localhost:8089/api")
                 .build();
